@@ -1,0 +1,33 @@
+{
+    "simpleProduct": {
+            "isproductExists" : true,
+            "productName": "Test Simple",
+            "simpleProductUrl": "https://blomstoggren.stag2.salecto.dk/test-simple"
+    },
+    "configProduct": {
+            "isproductExists" : true,
+            "productName": "Config Product New",
+            "configProductUrl": "https://blomstoggren.stag2.salecto.dk/test-simple-config"
+    },
+    "groupProduct": {
+        "isproductExists" : true,
+        "productName": "simple product",
+        "groupProductUrl": "https://blomstoggren.stag2.salecto.dk/test-simple-grouped"
+    },
+    "bundleProduct": {
+        "isproductExists" : true,
+        "productName": "simple product",
+        "bundleProductUrl":"https://blomstoggren.stag2.salecto.dk/test-simple-bundle"
+    },
+    "downloadProduct": {
+        "isproductExists" : true,
+        "productName": "simple product",
+        "downloadProductUrl":"https://blomstoggren.stag2.salecto.dk/test-simple-download"
+    },
+    "createAccountPage":{
+        "accountPageUrl": "https://blomstoggren.stag2.salecto.dk/customer/account/create/"
+    },
+    "loginPage":{
+        "loginPageUrl": "https://laerkehovedet.stag2.salecto.dk/customer/account/login/"
+    }
+}
