@@ -20,61 +20,61 @@ describe('Simple Product test suite', () => {
     }
 })
 
-// describe('Config Product Test suite',() => {
-//     if(product.configProduct.isproductExists){
-//     it('config', function(){
-//         cy.visit(product.configProduct.configProductUrl) // site url
-//         cy.wait(6000)
-//         cy.get('div').then(($div) => {
-//             if($div.hasClass('box-tocart')){
-//                 if($div.hasClass('product-options-wrapper')){ // checks config product
-//                     if($div.hasClass('swatch-opt')){ // Checks for swatch variant
-//                         cy.get('.swatch-opt')
-//                         .then($configOpt => {
-//                             cy.wait(5000)
-//                             cy.wrap($configOpt).find('.swatch-attribute').each(($attribute) => {
-//                                 cy.wait(5000)
-//                                 if($attribute.find('.swatch-option').length)
-//                                 cy.wrap($attribute).find('.swatch-option').then(($select1) => {
-//                                 cy.wrap($select1).eq(0).click({multiple: true})
-//                                 })
-//                                 if($attribute.find('select').length)
-//                                 cy.wrap($attribute).find('select').then(($select) => {
-//                                     if($select.hasClass('swatch-select')){
-//                                         cy.wrap($select).select(1);
-//                                     }
-//                                 })
-//                             })
-//                     })
-//                 }
-//                 if($div.hasClass('configurable')){ // Checks for dropdown only variant
-//                     cy.get('.field.configurable')
-//                     .then($configOpt => {
-//                         cy.wait(5000)
-//                         cy.wrap($configOpt).each(($attribute) => {
-//                             if($attribute.find('select').length){
-//                                 cy.wrap($attribute).find('select').then(($select) => {
-//                                     if($select.hasClass('super-attribute-select')){
-//                                         cy.wrap($select).select(1);
-//                                         cy.wait(6000)
+describe('Config Product Test suite',() => {
+    if(product.configProduct.isproductExists){
+    it('config', function(){
+        cy.visit(product.configProduct.configProductUrl) // site url
+        cy.wait(6000)
+        cy.get('div').then(($div) => {
+            if($div.hasClass('box-tocart')){
+                if($div.hasClass('product-options-wrapper')){ // checks config product
+                    if($div.hasClass('swatch-opt')){ // Checks for swatch variant
+                        cy.get('.swatch-opt')
+                        .then($configOpt => {
+                            cy.wait(5000)
+                            cy.wrap($configOpt).find('.swatch-attribute').each(($attribute) => {
+                                cy.wait(5000)
+                                if($attribute.find('.swatch-option').length)
+                                cy.wrap($attribute).find('.swatch-option').then(($select1) => {
+                                cy.wrap($select1).eq(0).click({multiple: true})
+                                })
+                                if($attribute.find('select').length)
+                                cy.wrap($attribute).find('select').then(($select) => {
+                                    if($select.hasClass('swatch-select')){
+                                        cy.wrap($select).select(1);
+                                    }
+                                })
+                            })
+                    })
+                }
+                if($div.hasClass('configurable')){ // Checks for dropdown only variant
+                    cy.get('.field.configurable')
+                    .then($configOpt => {
+                        cy.wait(5000)
+                        cy.wrap($configOpt).each(($attribute) => {
+                            if($attribute.find('select').length){
+                                cy.wrap($attribute).find('select').then(($select) => {
+                                    if($select.hasClass('super-attribute-select')){
+                                        cy.wrap($select).select(1);
+                                        cy.wait(6000)
                                        
-//                                     }
-//                                 })
-//                             }
-//                         })
-//                     })
+                                    }
+                                })
+                            }
+                        })
+                    })
                     
-//                 }}
-//             }
-//         }) 
-//        cy.addTocart();
-//        cy.checkout(); // checkout button click
-//     //    cy.checkoutDetails(); // checkout details fill
-//     //    cy.orderClick();
-//     })
-//     }
+                }}
+            }
+        }) 
+       cy.addTocart();
+       cy.checkout(); // checkout button click
+    //    cy.checkoutDetails(); // checkout details fill
+    //    cy.orderClick();
+    })
+    }
    
-// })
+})
 
 // describe('Bundle Product test suite', () => {
 //     if(product.bundleProduct.isproductExists){
